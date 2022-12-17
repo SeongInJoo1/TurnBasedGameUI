@@ -7,16 +7,16 @@
 
     <ImageView
         android:id="@+id/img_intro"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/travel_page_two"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/g2" />
 
     <TextView
         android:id="@+id/tv_title"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/ibm_bold"
-        android:text="Plan Your Trip"
+        android:text="TurnBasedGame"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="28sp"
@@ -27,7 +27,7 @@
         android:id="@+id/tv_description"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/ibm_regular"
-        android:text="Choose your destination, plan your trip. \nPick the best place to your holiday"
+        android:text="TurnBasedGame에 대한 설명"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="16sp"

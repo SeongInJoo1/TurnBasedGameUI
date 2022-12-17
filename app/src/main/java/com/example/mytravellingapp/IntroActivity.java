@@ -31,12 +31,6 @@ public class IntroActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        if (restorePreData()){
-            Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class);
-            startActivity(mainActivity);
-            finish();
-        }
-
         setContentView(R.layout.activity_intro);
 
         btnNext = findViewById(R.id.btn_next);
@@ -47,9 +41,9 @@ public class IntroActivity extends AppCompatActivity {
 
         //Data
         final List<ScreenItem> mList = new ArrayList<>();
-        mList.add(new ScreenItem("Plan Your Trip", "Choose your destination, plan your trip.\nPick the best place to your holiday", R.drawable.travel_page_one));
-        mList.add(new ScreenItem("Select the Date", "Select the day, book your ticket. We give\nthe best price for you", R.drawable.travel_page_two));
-        mList.add(new ScreenItem("Enjoy Your Trip", "Enjoy your holiday! Take a photo, share to\nthe world and tag me", R.drawable.travel_page_three));
+        mList.add(new ScreenItem("TurnBasedGame", "재밌는 카드게임입니다 \n1:1 턴제 배틀로 HP를 먼저 0으로 만드는 사람이 승리!\n 도전하세요!", R.drawable.g1));
+        mList.add(new ScreenItem("Select the Date", "Select the day, book your ticket. We give\nthe best price for you", R.drawable.g2));
+        mList.add(new ScreenItem("Enjoy Your Trip", "Enjoy your holiday! Take a photo, share to\nthe world and tag me", R.drawable.g3_re));
 
         //Setup viewPager
         screenPager = findViewById(R.id.screen_viewpager);
@@ -90,26 +84,13 @@ public class IntroActivity extends AppCompatActivity {
         btnGetStarted.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class);
+                Intent mainActivity = new Intent(IntroActivity.this, MainActivity.class);
                 startActivity(mainActivity);
-                savePrefsData();
-                finish();
             }
         });
     }
 
-    private boolean restorePreData(){
-        SharedPreferences preferences = getApplicationContext().getSharedPreferences("myPrefs", MODE_PRIVATE);
-        Boolean isIntroActivityOpenedBefore = preferences.getBoolean("isIntroOpened", false);
-        return isIntroActivityOpenedBefore;
-    }
 
-    private void savePrefsData(){
-        SharedPreferences preferences = getApplicationContext().getSharedPreferences("myPrefs", MODE_PRIVATE);
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putBoolean("isIntroOpened", true);
-        editor.apply();
-    }
 
     private void loadLastScreen(){
         linearLayoutNext.setVisibility(View.INVISIBLE);
