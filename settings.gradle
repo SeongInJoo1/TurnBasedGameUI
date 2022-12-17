@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name='MyTravellingApp'
+rootProject.name='client'

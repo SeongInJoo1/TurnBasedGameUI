@@ -1,4 +1,4 @@
-package com.example.mytravellingapp;
+package com.example.client;
 
 import android.content.Context;
 import android.view.LayoutInflater;

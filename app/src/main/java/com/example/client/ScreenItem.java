@@ -1,4 +1,4 @@
-package com.example.mytravellingapp;
+package com.example.client;
 
 public class ScreenItem {
     String Title, Description;
