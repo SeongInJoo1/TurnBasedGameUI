@@ -4,23 +4,19 @@ import java.io.Serializable;
 
 public class Data implements Serializable {
 
-    int attack;
+    private Info info;
+    private int iChoice;
     byte[] img;
 
-
-    public int getAttack() {
-        return attack;
+    public Info GetInfo(){return info;}
+    public void SetInfo(Info info){this.info = info;}
+    public void SetChoice(int iChoice) {
+        this.iChoice = iChoice;
     }
-
-    public void setAttack(int num) {
-        this.attack = num;
-    }
-
+    public int GetChoice() { return iChoice; }
     public byte[] getImg() {
         return img;
     }
-
-
     public void setImg(byte[] img) {
         this.img = img;
     }

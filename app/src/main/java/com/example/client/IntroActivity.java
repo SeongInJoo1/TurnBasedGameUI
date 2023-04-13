@@ -41,7 +41,7 @@ public class IntroActivity extends AppCompatActivity {
         //Data
         final List<ScreenItem> mList = new ArrayList<>();
         mList.add(new ScreenItem("TurnBasedGame", "재밌는 카드게임입니다 \n1:1 턴제 배틀로 HP를 먼저 0으로 만드는 사람이 승리!\n 도전하세요!", R.drawable.g1));
-        mList.add(new ScreenItem("Select the Date", "Select the day, book your ticket. We give\nthe best price for you", R.drawable.g2));
+        mList.add(new ScreenItem("Select the Datezzz", "zzzSelect the day, book your ticket. We give\nthe best price for you", R.drawable.g2));
         mList.add(new ScreenItem("Enjoy Your Trip", "Enjoy your holiday! Take a photo, share to\nthe world and tag me", R.drawable.g3_re));
 
         //Setup viewPager
